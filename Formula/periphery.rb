@@ -8,6 +8,7 @@ class Periphery < Formula
   def install
     bin.install "periphery"
     (etc/"komodo").install "periphery.config.toml"
+    (var/"komodo").mkpath
   end
 
   # Define a launchd service block
@@ -15,8 +16,8 @@ class Periphery < Formula
     run ["/bin/sh", "-c", "export PATH=$PATH:/usr/local/bin && #{opt_bin}/periphery --config-path #{etc}/komodo/periphery.config.toml"]
     keep_alive true
     working_dir var/"komodo"
-    log_path var/"log/komodo.log"
-    error_log_path var/"log/komodo-error.log"
+    log_path var/"log/komodo/periphery.log"
+    error_log_path var/"log/komodo/periphery-error.log"
   end
 
   test do

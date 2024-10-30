@@ -22,13 +22,13 @@ port = 8120
 ## The periphery user must have write access to this directory.
 ## Env: PERIPHERY_REPO_DIR
 ## Default: /etc/komodo/repos
-repo_dir = "komodo/repos"
+repo_dir = "repos"
 
 ## The directory periphery will use to manage stacks.
 ## The periphery user must have write access to this directory.
 ## Env: PERIPHERY_STACK_DIR
 ## Default: /etc/komodo/stacks
-stack_dir = "komodo/stacks"
+stack_dir = "stacks"
 
 ## How often Periphery polls the host for system stats,
 ## like CPU / memory usage.
