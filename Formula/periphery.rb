@@ -12,11 +12,11 @@ class Periphery < Formula
 
   # Define a launchd service block
   service do
-    run ["/bin/sh", "-c", "#{opt_bin}/periphery --config-path #{etc}/komodo/periphery.config.toml"]  # Specify the binary and any options
-    keep_alive true   # Ensures the service is always running
-    working_dir var/"komodo"   # Directory where it should run, change if necessary
-    log_path var/"komodo/log/periphery.log"
-    error_log_path var/"komodo/log/periphery-error.log"
+    run ["/bin/sh", "-c", "export PATH=$PATH:/usr/local/bin && #{opt_bin}/periphery --config-path #{etc}/komodo/periphery.config.toml"]
+    keep_alive true
+    working_dir var/"komodo"
+    log_path var/"log/komodo.log"
+    error_log_path var/"log/komodo-error.log"
   end
 
   test do
