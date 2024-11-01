@@ -65,7 +65,7 @@ allowed_ips = ["127.0.0.1"]
 ## Optional. Require callers to provide on of the provided passkeys to access the periphery api.
 ## Env: PERIPHERY_PASSKEYS or PERIPHERY_PASSKEYS_FILE
 ## Default: empty, which will not require any passkey to be passed by core.
-passkeys = ["a_random_passkey"]
+passkeys = []
 
 ############
 # Security #
