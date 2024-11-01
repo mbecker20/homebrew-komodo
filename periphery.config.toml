@@ -76,7 +76,7 @@ passkeys = []
 ## self signed keys will be generated using openssl.
 ## Env: PERIPHERY_SSL_ENABLED
 ## Default: false (will change to `true` in later release)
-ssl_enabled = false
+ssl_enabled = true
 
 ## Path to the ssl key.
 ## Env: PERIPHERY_SSL_KEY_FILE
