@@ -60,7 +60,7 @@ exclude_disk_mounts = []
 ## Optional. Limit the ip addresses which can call the periphery api.
 ## Env: PERIPHERY_ALLOWED_IPS
 ## Default: empty, which will not block any request by ip.
-allowed_ips = []
+allowed_ips = ["127.0.0.1"]
 
 ## Optional. Require callers to provide on of the provided passkeys to access the periphery api.
 ## Env: PERIPHERY_PASSKEYS or PERIPHERY_PASSKEYS_FILE
