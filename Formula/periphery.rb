@@ -14,10 +14,9 @@ class Periphery < Formula
 
   # Define a launchd service block
   service do
-    run [opt_bin/"periphery", "--config-path", etc/"komodo/periphery.config.toml"]
+    run ["/bin/sh", "-c", "PATH=$PATH:/usr/local/bin #{opt_bin}/periphery --config-path #{etc}/komodo/periphery.config.toml"]
     keep_alive true
     working_dir var/"komodo"
-    environment_variables PATH: std_path
     log_path var/"log/komodo/periphery.log"
     error_log_path var/"log/komodo/periphery-error.log"
   end
