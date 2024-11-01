@@ -5,7 +5,8 @@ cmd = ""
 description = "Assumes built periphery located at ../komodo/target/release/periphery"
 cmd = """
 cp ../komodo/target/release/periphery . && \
-tar -czvf periphery-1.16.6.tar.gz periphery periphery.config.toml && \
+VERSION=$(./periphery --version | cut -d' ' -f2) && \
+tar -czvf periphery-$VERSION.tar.gz periphery periphery.config.toml && \
 rm periphery && \
-echo "\n$(shasum -a 256 periphery-1.16.6.tar.gz)"
+echo "\n$(shasum -a 256 periphery-$VERSION.tar.gz)"
 """
